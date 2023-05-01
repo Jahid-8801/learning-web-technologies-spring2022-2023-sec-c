@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>eventregistration</title>
+    <link rel="stylesheet" href="style.css">
+
+
+
+
+</head>
+
+<body>
+
+
+    <body>
+        <form method="POST" action="../Controller/eventRegistrationcheck.php" enctype="">
+            <pre>
+
+            NAME    : <input type="text" name="name" value="" onkeyup="N()" />
+            <span id="nameError"></span><br>
+
+   
+
+          
+        </pre>
+
+            <input type="submit" name="submit" value="Submit" />
+        </form>
+        <script>
+
+
+
+
+            function validateEmail() {
+                let emailInput = document.getElementsByName("email")[0];
+                let emailError = document.getElementById("emailError");
+
+                if (!emailInput.checkValidity()) {
+                    emailError.innerHTML = "Please enter a valid email address";
+                    emailInput.style.border = "1px solid red";
+                } else {
+                    emailError.innerHTML = "";
+                    emailInput.style.border = "";
+                }
+            }
+
+
+
+
+
+            function E() {
+                validateEmail();
+            }
+
+
+
+
+        </script>
+
+    </body>

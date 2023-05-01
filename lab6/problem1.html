@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>eventregistration</title>
+    <link rel="stylesheet" href="style.css">
+
+
+
+
+</head>
+
+<body>
+
+
+    <body>
+        <form method="POST" action="../Controller/eventRegistrationcheck.php" enctype="">
+            <pre>
+
+            NAME    : <input type="text" name="name" value="" onkeyup="N()" />
+            <span id="nameError"></span><br>
+
+        
+
+          
+        </pre>
+
+            <input type="submit" name="submit" value="Submit" />
+        </form>
+        <script>
+
+            function validateName() {
+                let nameInput = document.getElementsByName("name")[0];
+                let nameError = document.getElementById("nameError");
+
+                if (nameInput.value.length < 3) {
+                    nameError.innerHTML = "Name must be at least 3 characters long";
+                    nameInput.style.border = "1px solid red";
+                } else {
+                    nameError.innerHTML = "";
+                    nameInput.style.border = "";
+                }
+            }
+
+
+
+
+            function N() {
+                validateName();
+            }
+
+
+
+
+
+        </script>
+
+    </body>
+
+
+
+
+</body>
+
+</html>
