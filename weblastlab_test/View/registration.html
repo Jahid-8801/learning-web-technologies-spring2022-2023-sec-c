@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <title>Lab test Registration</title>
+</head>
+
+<body>
+    <form method="POST" action="" enctype="">
+        <fieldset>
+            <legend>Registration</legend>
+            <pre>
+
+
+                    NAME    : <input type="text" name="name" value="" onkeyup="N()" />
+                    <span id="nameError"></span><br>
+        
+                    PHONE   : <input type="number" name="phone" value="" onkeyup="P()" />
+                    <span id="phoneError"></span><br>
+
+                    Username: <input type="text" name="name" value="" onkeyup="N()" />
+                    <span id="nameError"></span><br>
+        
+                    Password: <input type="password" name="password" value="password" /> <br>
+        
+                
+        
+                <input type="submit" name="submit" value="Signup" /> <a href="index.php" target="_blank">Already have an account? Signin</a><br>  
+                
+            </pre>
+        </fieldset>
+    </form>
+    <script>
+
+        function validateName() {
+            let nameInput = document.getElementsByName("name")[0];
+            let nameError = document.getElementById("nameError");
+
+            if (nameInput.value.length < 3) {
+                nameError.innerHTML = "Name must be at least 3 characters long";
+                nameInput.style.border = "1px solid red";
+            } else {
+                nameError.innerHTML = "";
+                nameInput.style.border = "";
+            }
+        }
+
+
+
+
+        function validatePhone() {
+            let phoneInput = document.getElementsByName("number")[0];
+            let phoneError = document.getElementById("phoneError");
+
+            if (phoneInput.value.length < 10 || phoneInput.value.length > 11) {
+                phoneError.innerHTML = "Please enter a valid phone number";
+                phoneInput.style.border = "1px solid red";
+            } else {
+                phoneError.innerHTML = "";
+                phoneInput.style.border = "";
+            }
+        }
+
+        function N() {
+            validateName();
+        }
+
+
+        function P() {
+            validatePhone();
+        }
+
+    </script>
+
+    </form>
+</body>
+
+</html>
